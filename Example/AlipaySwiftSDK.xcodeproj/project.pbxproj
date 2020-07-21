@@ -39,12 +39,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7F6A41B7526D9729FA5D4977 /* Pods-AlipaySwiftSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlipaySwiftSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-AlipaySwiftSDK_Tests/Pods-AlipaySwiftSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		89CFB6CA0260FC2D362EEFD0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A4F361C8826550A2E5877487 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		89CFB6CA0260FC2D362EEFD0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A4F361C8826550A2E5877487 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ABAA0E4C45B4BDD40649FA4F /* Pods_AlipaySwiftSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlipaySwiftSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEA4321D9C9777171DBA56D /* Pods_AlipaySwiftSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlipaySwiftSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58336403BEB680EF6C586BA /* Pods-AlipaySwiftSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlipaySwiftSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D9587D058B67C5EA4D58284F /* AlipaySwiftSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AlipaySwiftSDK.podspec; path = ../AlipaySwiftSDK.podspec; sourceTree = "<group>"; };
+		D9587D058B67C5EA4D58284F /* AlipaySwiftSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AlipaySwiftSDK.podspec; path = ../AlipaySwiftSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EF13678022543B94ECA555F6 /* Pods-AlipaySwiftSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlipaySwiftSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AlipaySwiftSDK_Tests/Pods-AlipaySwiftSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF85E6C7583D52A9E50EB6FB /* Pods-AlipaySwiftSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlipaySwiftSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 				EF13678022543B94ECA555F6 /* Pods-AlipaySwiftSDK_Tests.debug.xcconfig */,
 				7F6A41B7526D9729FA5D4977 /* Pods-AlipaySwiftSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				A410367098C7CF83F099C8A7 /* [CP] Embed Pods Frameworks */,
+				0DD01E13E0C12BE6C42F05B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -263,6 +263,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DD01E13E0C12BE6C42F05B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example-resources.sh",
+				"${PODS_ROOT}/../../Vendor/AlipaySDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70D132501C9292EF00863038 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,24 +301,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A410367098C7CF83F099C8A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AlipaySwiftSDK/AlipaySwiftSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlipaySwiftSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlipaySwiftSDK_Example/Pods-AlipaySwiftSDK_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A692C0054AD1AA28758D5253 /* [CP] Embed Pods Frameworks */ = {
